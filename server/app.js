@@ -3,8 +3,7 @@ const express = require('express');
 const compression = require('compression');
 const router = require('./routes');
 
-const  { clientError, serverError } = require('./controllers');
-
+const { clientError, serverError } = require('./controllers');
 
 const app = express();
 
