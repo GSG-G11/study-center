@@ -6,9 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study-center</title>
     <link rel="stylesheet" href="./css/style.css">
+    <!--Font Awesome Link -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
 </head>
 <body>
-    
+    <nav>
+        <h1>Stydy-center</h1>
+    </nav>
+    <header>
+             <button class="add-course-btn">Add Course</button>
+             <button class="add-student-btn">Add Student</button>
+    </header>
+    <section class="forms">
+        <div class="courses-form">
+            <div class="close-course-form"><i class="fas fa-times close-course-form"></i></div>
+            <form post="method" action="/add-course">
+                <input type="text" name="course-name" placeholder="Enter name course..."/>
+                <input type="number" name="course-hours" placeholder="Enter number hours..."/>
+                <button class="add-course" type="submit">Add Course</button>
+            </form>
+        </div>
+   
+        <div class="students-form">
+            <div class="close-student-form"><i class="fas fa-times close-student-form"></i></div>
+           <form post="method" action="/add-student">
+               <input type="text" name="student-name" placeholder="Enter name ..."/>
+               <input type="email" name="student-email" placeholder="Enter email..."/>
+               <input type="number" name="phone-number" placeholder="Enter phone number ..."/>
+               <select>
+                   <option value="">1</option>
+               </select>
+               <button class="add-student" type="submit">Add Student</button>
+           </form>
+       </div>
+    </section>
+    <section class="info">
+        <table>
+            <thead>
+                <th>Course name</th>
+                <th>Student Name</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Graphic Design</td>
+                    <td>Isaam</td>
+                    <td><button class="delete-student"><i class="fas fa-trash-alt"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
     <script src="./js/dom.js"></script>
 </body>
 </html>
