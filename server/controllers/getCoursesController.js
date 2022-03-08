@@ -1,4 +1,4 @@
-const getCourses = require('../database/queires/getCourses');
+const { getCourses } = require('../database/queires');
 
 const getCoursesController = (req, res) => {
   getCourses()
