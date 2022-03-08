@@ -38,7 +38,6 @@ const students = (data) => {
   data.forEach((ele) => {
     const tr = document.createElement('tr');
     const studentName = document.createElement('td');
-    console.log(ele.student_name);
     studentName.textContent = ele.student_name;
     const couresName = document.createElement('td');
     couresName.textContent = ele.course_name;
