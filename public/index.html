@@ -8,7 +8,38 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+    <nav>
+        <h1>Stydy-center</h1>
+    </nav>
+    <header>
+        <header>
+            <h1>Study-Center</h1>
+        </header>
+         <div>
+             <button>add course</button>
+             <button>add Student</button>
+         </div>
+    </header>
+    <section class="forms">
+        <div class="courses-form">
+            <form post="method" action="/add-course">
+                <input type="text" name="course-name" placeholder="Enter name course..."/>
+                <input type="number" name="course-hours" placeholder="Enter number hours..."/>
+                <button type="submit">Add Course</button>
+            </form>
+        </div>
+   
+        <div class="students-form">
+           <form post="method" action="/add-student">
+               <input type="text" name="student-name" placeholder="Enter name ..."/>
+               <input type="email" name="student-email" placeholder="Enter email..."/>
+               <input type="number" name="phone-number" placeholder="Enter phone number ..."/>
+               <select>
+                   <option value="">1</option>
+               </select>
+           </form>
+       </div>
+    </section>
     <script src="./js/dom.js"></script>
 </body>
 </html>
