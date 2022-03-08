@@ -1,4 +1,4 @@
- BEGIN;
+BEGIN;
 drop table if exists courses, students ;
 create table courses (
     course_id serial primary key,
