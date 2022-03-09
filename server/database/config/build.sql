@@ -1,5 +1,5 @@
 BEGIN;
-drop table if exists courses, students ;
+drop table if exists courses, students cascade;
 create table courses (
     course_id serial primary key,
     course_name varchar(100) not null,
