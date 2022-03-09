@@ -7,7 +7,7 @@ const addStudentController = (req, res) => {
     req.body.phone_number,
     req.body.coures_id,
   )
-    .then(() => res.redirect('/'))
+    .then(() => res.redirect('/nextPage'))
     .catch((error) => res.status(500).send(error));
 };
 

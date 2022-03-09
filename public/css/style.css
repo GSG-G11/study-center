@@ -44,7 +44,6 @@ header {
     margin-bottom: 0.5em;
     display: none;
     border: 1px solid var(--addColor);
-    border-radius: 1em;
 }
 .close-course-form,
 .close-student-form {
@@ -77,22 +76,52 @@ header {
     margin: 0.5em auto;
 }
 .info {
-    width: 40vw;
-    margin: 0 auto;
+    width: 80vw;
+    margin: 1.5em auto 0em;
+    display: flex;
+    border: 1px solid var(--primaryColor);
+    /* padding: 1em; */
 }
-table {
-    width: 100%;
-    margin-bottom: 3em;
+.courses-display {
+    width: 30%;
+    border-right: 1px solid var(--primaryColor);
+    margin: 1em;
+
 }
-table,td,th,tr {
+.courses-display h2 {
+ color: var(--primaryColor);
+ margin-bottom: 1em;
+ font-size: 1.5em;
+}
+.courses-display .course_name {
+    display: flex;
+    flex-direction: column;
+}
+.courses-display .course_name span {
+    cursor: pointer;
+    color: var(--secondaryColor);
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+.data-display {
+    width: 70%; 
+    margin: 1em; 
+}
+table,tr,td,th {
     border: 1px solid var(--primaryColor);
     border-collapse: collapse;
     padding: 0.5em;
 }
+table {
+    display: none;
+    padding: 0;
+}
 thead {
     color: var(--primaryColor);
     font-size: 1.5em;
+    margin:  0 auto;
 }
+td,th {width: 15em;}
 tbody {
     text-align: center;
 }
@@ -104,5 +133,12 @@ tbody {
 .delete-student i {
     color: var(--secondaryColor);
     font-size: 1.5em;
+}
+.no-student {
+    color: var(--secondaryColor);
+    font-size: 1.5em;
+    text-align: center;
+    display: none;
+    margin-top: 5em;
 }
 

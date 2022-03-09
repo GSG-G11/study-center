@@ -2,8 +2,9 @@ const { clientError, serverError } = require('./handleError');
 const getCoursesController = require('./getCoursesController');
 const addCoursesController = require('./addCourseController');
 const addStudentController = require('./addStudentController');
-const getCourseStudentController = require('./getCourseStudentController');
+const postStudentController = require('./postStudentController');
 const deleteStudentController = require('./deleteStudentController');
+const nextPage = require('./nextPage');
 
 module.exports = {
   clientError,
@@ -11,6 +12,7 @@ module.exports = {
   getCoursesController,
   addCoursesController,
   addStudentController,
-  getCourseStudentController,
+  postStudentController,
   deleteStudentController,
+  nextPage,
 };
