@@ -15,7 +15,7 @@ create table students (
 );
 
 insert into courses (course_name,course_hour) values 
-('Graphic Desig', 50),
+('Graphic Design', 50),
 ('Laravel', 60),
 ('front end', 80),
 ('ICDL', 20),

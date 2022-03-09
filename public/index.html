@@ -5,56 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study-center</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <!--Font Awesome Link -->
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-    <nav>
-        <h1>Study-center</h1>
-    </nav>
-    <header>
-             <button class="add-course-btn">Add Course</button>
-             <button class="add-student-btn">Add Student</button>
-    </header>
-    <section class="forms">
-        <div class="courses-form">
-            <div class="close-course-form"><i class="fas fa-times close-course-form"></i></div>
-            <form method="post" action="/add-course">
-                <input type="text" name="course_name" placeholder="Enter name course..."/>
-                <input type="number" name="course_hours" placeholder="Enter number hours..."/>
-                <button class="add-course" type="submit">Add Course</button>
-            </form>
-        </div>
-   
-        <div class="students-form">
-            <div class="close-student-form"><i class="fas fa-times close-student-form"></i></div>
-           <form method="post"  action="/add-student">
-               <input type="text" name="student_name" placeholder="Enter name ..."/>
-               <input type="email" name="student_email" placeholder="Enter email..."/>
-               <input type="number" name="phone_number" placeholder="Enter phone number ..."/>
-               <select class="select" name="coures_id">                   
-               </select>
-               <button class="add-student" type="submit">Add Student</button>
-           </form>
+   <main>
+       <div class="info-center">
+           <h1>Welcome to Study Center</h1>
+            <button class="get-started"><a href="/nextPage">Get Started</a></button>
        </div>
-    </section>
-    <section class="info">
-        <table>
-            <thead>
-                <th>Student Name</th>
-                <th>Course Name</th>
-                <th>Action</th>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-    </section>
-    <script src="./js/dom.js"></script>
+       <div class="image-center">
+           <img class="center" src="./images/20944386.jpg" alt="enter"/>
+       </div>
+   </main>
 </body>
 </html>

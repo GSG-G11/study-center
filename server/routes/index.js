@@ -4,14 +4,16 @@ const {
   getCoursesController,
   addCoursesController,
   addStudentController,
-  getCourseStudentController,
   deleteStudentController,
+  postStudentController,
+  nextPage,
 } = require('../controllers');
 
+router.get('/nextPage', nextPage);
 router.get('/getCourses', getCoursesController);
 router.post('/add-course', addCoursesController);
 router.post('/add-student', addStudentController);
-router.get('/getCourseStudent', getCourseStudentController);
+router.post('/postStudent', postStudentController);
 router.delete('/deleteStudent', deleteStudentController);
 
 module.exports = router;
