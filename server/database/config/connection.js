@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === 'production') {
 
 const connection = new Pool({
   connectionString: DB_URL,
-  ssl: false,
+  ssl: { rejectUnauthorized: false },
 });
 
 module.exports = connection;
