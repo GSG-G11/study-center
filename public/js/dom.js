@@ -47,6 +47,10 @@ const deletedStudent = (element) => {
       body: JSON.stringify({ id: studentId }),
     });
     element.parentElement.remove();
+    if (tBody.childNodes.length === 1) {
+      table.style.display = 'none';
+      noStudent.style.display = 'block';
+    }
   });
 };
 /* ****  create function to render data (student name ,course name , student id) *** */
@@ -77,12 +81,6 @@ const students = (data) => {
     noStudent.style.display = 'block';
   }
 };
-
-// // fetch data (coures name ,student name , student id) to render table
-// fetch('/getCourseStudent')
-//   .then((res) => res.json())
-//   .then((data) => students(data));
-
 // create options for select tag
 const options = (data) => {
   data.forEach((coures) => {
@@ -101,9 +99,13 @@ const spans = (data) => {
     span.textContent = coures.course_name;
     courseName.appendChild(span);
   });
-  document.querySelectorAll('.name-course').forEach((nameCoures) => {
-    nameCoures.addEventListener('click', () => {
-      const courseId = nameCoures.getAttribute('id');
+  const coureses = document.querySelectorAll('.name-course');
+  document.addEventListener('click', (e) => {
+    // eslint-disable-next-line no-param-reassign
+    coureses.forEach((course) => { course.style.color = 'var(--secondaryColor)'; });
+    if (e.target.getAttribute('class') === 'name-course') {
+      e.target.style.color = 'var(--addColor)';
+      const courseId = e.target.getAttribute('id');
       fetch('/postStudent', {
         method: 'post',
         headers: {
@@ -113,7 +115,7 @@ const spans = (data) => {
       })
         .then((res) => res.json())
         .then((dataRes) => students(dataRes));
-    });
+    }
   });
 };
 // fetch data in courses table and callback for options function to creat option for course name
