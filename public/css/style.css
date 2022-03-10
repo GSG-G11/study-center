@@ -11,10 +11,17 @@
     --deleteColor:rgb(230, 228, 228);
     --addColor:rgb(54, 116, 54);
 }
+nav {
+    width: 70vw;
+    margin: 1em auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+}
 nav h1 {
     color: var(--primaryColor);
     text-align: center;
-    margin-top: 1em;
+    margin-left: .5em;
     font-size: 3em;
 }
 header {
